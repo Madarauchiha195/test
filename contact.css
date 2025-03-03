@@ -1,0 +1,455 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', arial, sans-serif;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 50px;
+}
+
+.logo{
+    width: 300px;
+}
+
+.navbar {
+    background-color: none;
+    color: #fff;
+    padding: 0.5em;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 100px;
+}
+
+.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+}
+    
+
+
+.nav-list li {
+    position: relative;
+}
+.nav-list li .active{
+    color: brown;
+}
+
+.nav-list a {
+    color: #000000;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    text-transform: uppercase;
+    
+    
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    z-index: 1000;
+    box-shadow: 0 3px 6px 3px rgba(0, 0, 0, 0.24);
+    border-radius: 4px;
+    
+}
+
+.dropdown-menu li a {
+    padding: 10px;
+    color: #000000;
+    display: block;
+    text-decoration: none;
+    text-transform:capitalize;
+}
+
+.dropdown-menu li a:hover {
+    color: brown;
+}
+
+.dropdown-toggle {
+    background: none;
+    border: none;
+    color: #000000;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+footer{
+    position: relative;
+    top: 50px;
+    z-index: -1;
+}
+.home-last{
+    position: relative;
+    top: 265px;
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: lighter;
+    height: 90px;
+    color: rgb(89, 89, 89);
+}
+.social-media-icons{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 240px;
+    gap: 20px;
+}
+
+a:visited{
+    color: rgba(0, 0, 0, 0);
+}
+
+
+
+/* Contact Form Styles */
+.cf-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    box-sizing: border-box; 
+    position: relative;
+    top: 150px;
+}
+
+.cf-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: rgb(138, 80, 80);
+}
+
+@media screen and (max-width: 768px) {
+    .cf-title {
+        text-align: left;
+    }
+    
+}
+
+@media screen and (max-width: 480px) {
+    .cf-title {
+        text-align: left;
+    }
+    
+}
+.cf-subtitle {
+    margin-bottom: 2rem;
+    color: #666;
+}
+
+.cf-content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .cf-content-wrapper {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.cf-form-section {
+    background: white;
+    padding: 3rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+
+@media (min-width: 480px) {
+    .cf-name-group {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.cf-form-group {
+    margin-bottom: 1.5rem;
+}
+
+.cf-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.cf-required {
+    color: #ff4444;
+}
+
+.cf-input,
+.cf-textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.cf-input:focus,
+.cf-textarea:focus {
+    outline: none;
+    border-color: brown;
+    box-shadow: 0 0 0 2px rgba(135, 28, 28, 0.25);
+}
+
+.cf-error-message {
+    color: #ff4444;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    display: block;
+}
+
+.cf-button {
+    background-color: rgb(169, 66, 66);
+    color: white;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 120px;
+}
+
+.cf-button:hover {
+    background-color: rgb(130, 34, 34);
+}
+
+.cf-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.cf-spinner {
+    width: 20px;
+    height: 20px;
+    border: 3px solid #ffffff;
+    border-top: 3px solid transparent;
+    border-radius: 50%;
+    animation: cf-spin 1s linear infinite;
+    margin-left: 0.5rem;
+}
+
+.cf-hidden {
+    display: none;
+}
+
+@keyframes cf-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Office Information Styles */
+.cf-info-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.cf-office-info {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cf-office-info h2 {
+    margin-bottom: 1rem;
+    color: rgb(138, 80, 80);
+}
+
+.cf-address {
+    font-style: normal;
+    line-height: 1.8;
+    color: #666;
+}
+
+/* Map Styles */
+.cf-map-container {
+    height: 400px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Toast Notification */
+.cf-toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #333;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transform: translateY(150%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.cf-toast.show {
+    transform: translateY(0);
+}
+
+.cf-toast.success {
+    background: #28a745;
+}
+
+.cf-toast.error {
+    background: #dc3545;
+}
+
+
+/* Phone Number Container */
+.cf-phone-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    font-size: 1rem;
+    
+}
+
+/* Country Code Dropdown */
+.cf-phone-container select {
+    appearance: none; /* Removes native styles for select dropdowns */
+    border: none;
+    background: #f9f9f9;
+    color: #333;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border-right: 1px solid #ddd;
+    outline: none;
+    cursor: pointer;
+    width: 100px; /* Adjust based on design */
+    text-align: center;
+}
+
+/* Dropdown Arrow Customization */
+.cf-phone-container select:focus {
+    outline: none;
+    border-right-color: brown;
+    box-shadow: 0 0 0 2px rgba(135, 28, 28, 0.25);
+}
+
+/* Phone Input */
+.cf-phone-container input {
+    flex: 1;
+    padding: 0.75rem;
+    border: none;
+    font-size: 1rem;
+    color: #333;
+}
+
+.cf-phone-container input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(135, 28, 28, 0.25);
+}
+
+/* Adding Hover Effects */
+.cf-phone-container select:hover,
+.cf-phone-container input:hover {
+    background-color: #f2f2f2;
+}
+
+/* For Smaller Screens */
+@media (max-width: 480px) {
+    .cf-form-section{
+        width:250px;
+        padding-left: 15px;
+    }
+    .cf-phone-container select {
+        width: 100px;
+    }
+}
+
+
+/* Hamburger Menu */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    gap: 3.5px;
+    cursor: pointer;
+    z-index: 10;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+
+.hamburger-menu .line {
+    width: 30px;
+    height: 4px;
+    background-color: #000;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    border-radius: 5px;
+}
+
+/* Transformations for active state */
+.hamburger-menu.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger-menu.active .line:nth-child(2) {
+    opacity: 0;
+}
+.hamburger-menu.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Responsive Nav */
+.nav-list {
+    display: flex;
+}
+
+.navbar {
+    position: relative;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        background-color: #fff;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        z-index: 9;
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+}
